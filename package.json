@@ -13,5 +13,8 @@
   "devDependencies": {
     "expect": "^24.8.0",
     "mocha": "^6.1.4"
+  },
+  "dependencies": {
+    "app-root-path": "^2.2.1"
   }
 }
