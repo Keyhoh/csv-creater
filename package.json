@@ -9,5 +9,9 @@
   },
   "keywords": [],
   "author": "iheyhoh@gmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "expect": "^24.8.0",
+    "mocha": "^6.1.4"
+  }
 }
