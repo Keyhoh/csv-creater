@@ -1,3 +1,3 @@
-export default interface Executable {
-    execute(): string | null;
+export default interface StringCreator {
+    create(): string | null;
 }

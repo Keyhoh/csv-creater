@@ -1,6 +1,6 @@
-import Executable from './Executable';
+import StringCreator from './StringCreator';
 
-export default class Sequencer implements Executable {
+export default class Sequencer implements StringCreator {
 
     private counter: number = 0;
 
@@ -12,7 +12,7 @@ export default class Sequencer implements Executable {
         this.step = isNaN(step = Number(step)) ? 1 : step;
     }
 
-    execute(): string {
+    create(): string | null {
         return String(this.from + this.step * this.counter++);
     }
 }
