@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "mocha --require ts-node/register --watch-extensions ts,tsx 'test/**/*.{ts,tsx}'",
+    "test": "mocha --watch --require ts-node/register --watch-extensions ts,tsx 'test/**/*.{ts,tsx}'",
     "build": "webpack",
     "start": "node ./dist/bundle.js"
   },
