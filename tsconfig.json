@@ -8,6 +8,7 @@
         "typeRoots": [
             "./node_modules/@types"
         ],
+        "strictNullChecks": true,
         "esModuleInterop": true
     },
     "include": [
