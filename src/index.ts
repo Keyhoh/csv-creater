@@ -1,22 +1,13 @@
-const createLineFromExecutables = (executables: Array<Function>, separator = ',') => {
-    return executables.map(executable => executable()).join(separator);
+import Executable from "./executable/Executable";
+const createLineFromExecutables = (executables: Array<Executable>, separator = ',') => {
+    return executables.map(executable => executable.execute()).join(separator);
 }
 
-import { sequencer } from "./executable/sequencer";
-import { randomer } from "./executable/randomer";
-import { randomSwitcher } from "./executable/randomSwitcher";
+import Sequencer from "./executable/sequencer";
 
-const defaultSeq = sequencer();
-const reverseSeq = sequencer(-1, -1);
-const defaultRandomSwitcher = randomSwitcher(defaultSeq, reverseSeq);
-
-import * as dateFns from "date-fns";
-
-const defaultRandomer = randomer();
-
-const now = Date.now();
-const dateRandomer = () => dateFns.addDays(now, defaultRandomer()).getDate();
+const defaultSeq = new Sequencer();
+const reverseSeq = new Sequencer(-1, -1);
 
 for (let i = 0; i < 10; i++) {
-    console.log(createLineFromExecutables([defaultRandomSwitcher, dateRandomer]));
+    console.log(createLineFromExecutables([defaultSeq, reverseSeq]));
 }
