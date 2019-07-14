@@ -1,22 +1,22 @@
-const createLineFromExecutables = (executables = [() => null], separator = ',') => {
+const createLineFromExecutables = (executables: Array<Function>, separator = ',') => {
     return executables.map(executable => executable()).join(separator);
 }
 
-const { sequencer } = require('./executable/sequencer');
-const { randomer } = require('./executable/randomer');
-const { randomSwitcher } = require('./executable/randomSwitcher');
+import { sequencer } from "./executable/sequencer";
+import { randomer } from "./executable/randomer";
+import { randomSwitcher } from "./executable/randomSwitcher";
 
 const defaultSeq = sequencer();
 const reverseSeq = sequencer(-1, -1);
 const defaultRandomSwitcher = randomSwitcher(defaultSeq, reverseSeq);
 
-const dateFns = require('date-fns');
+import * as dateFns from "date-fns";
 
 const defaultRandomer = randomer();
 
-const today = Date.now();
-const addRandomDay = () => dateFns.addDays(today, defaultRandomer()).getDate();
+const now = Date.now();
+const dateRandomer = () => dateFns.addDays(now, defaultRandomer()).getDate();
 
 for (let i = 0; i < 10; i++) {
-    console.log(createLineFromExecutables([defaultRandomSwitcher, addRandomDay]));
+    console.log(createLineFromExecutables([defaultRandomSwitcher, dateRandomer]));
 }

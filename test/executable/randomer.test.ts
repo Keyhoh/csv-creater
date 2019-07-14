@@ -1,7 +1,6 @@
-const assert = require('assert');
+import * as assert from 'assert';
 
-const mainRoot = require('app-root-path').resolve('/src');
-const { randomer } = require(`${mainRoot}/executable/randomer`);
+import { randomer } from "../../src/executable/randomer";
 
 describe('randomer', () => {
     it('should return from integer', () => {

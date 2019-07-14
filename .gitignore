@@ -89,3 +89,7 @@ typings/
 
 # Local history files
 .history/
+
+# project build output
+
+dist/

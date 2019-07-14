@@ -9,4 +9,4 @@ const randomer = (from = 0, to = 1) => {
 
 randomer.create = () => Math.random();
 
-module.exports.randomer = randomer;
+export { randomer };

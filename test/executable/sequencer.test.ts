@@ -1,7 +1,6 @@
-const assert = require('assert');
+import * as assert from "assert";
 
-const mainRoot = require('app-root-path').resolve('/src');
-const { sequencer } = require(`${mainRoot}/executable/sequencer`);
+import { sequencer } from "../../src/executable/sequencer";
 
 describe('sequencer', () => {
     const MAX = 10000;
@@ -46,14 +45,6 @@ describe('sequencer', () => {
 
         for (let i = 0; i < MAX; i++) {
             assert.equal(sequenceStepByNaN(), i + 101);
-        }
-    });
-
-    it('should return sequence using default "from" value and default "step" value', () => {
-        const sequenceFromNaNStepByNaN = sequencer('a', 'b');
-
-        for (let i = 0; i < MAX; i++) {
-            assert.equal(sequenceFromNaNStepByNaN(), i + 1);
         }
     });
 });
