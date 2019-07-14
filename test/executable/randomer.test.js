@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const mainRoot = require('app-root-path').resolve('/src/main');
+const mainRoot = require('app-root-path').resolve('/src');
 const { randomer } = require(`${mainRoot}/executable/randomer`);
 
 describe('randomer', () => {
