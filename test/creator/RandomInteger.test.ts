@@ -1,6 +1,6 @@
 import * as assert from 'assert';
 
-import RandomInteger from "../../src/executable/RandomInteger";
+import RandomInteger from "../../src/creator/RandomInteger";
 
 describe('RandomInteger', () => {
     it("should return 'from' integer", () => {
