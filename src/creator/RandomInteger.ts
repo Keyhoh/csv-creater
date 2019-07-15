@@ -5,7 +5,7 @@ export default class RandomInteger extends RandomStringCreator {
   private readonly len: number;
   private readonly fix: (x: number) => number;
 
-  constructor({ from, len, random }: { from: number, len: number, random: () => number }) {
+  constructor({ from, len }: { from: number, len: number }, random: () => number = Math.random) {
     super(random);
     this.from = from;
     this.len = len;
