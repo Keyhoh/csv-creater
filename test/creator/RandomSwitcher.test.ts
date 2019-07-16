@@ -19,14 +19,14 @@ describe('RandomSwitcher', () => {
     const secondCreator = new ConstantStringCreator('second');
 
     it("should return return-value of firstCreator", () => {
-        const returnFirst = new RandomSwitcher({ firstCreator: firstCreator, secondCreator: secondCreator, rate: 1 });
+        const returnFirst = new RandomSwitcher({ firstCreator, secondCreator, rate: 1 });
         for (let i = 0; i < 100; i++) {
             assert.equal(returnFirst.create(), 'first');
         }
     });
 
     it("should return return-value of secondCreator", () => {
-        const returnSecond = new RandomSwitcher({ firstCreator: firstCreator, secondCreator: secondCreator, rate: 0 });
+        const returnSecond = new RandomSwitcher({ firstCreator, secondCreator, rate: 0 });
         for (let i = 0; i < 100; i++) {
             assert.equal(returnSecond.create(), 'second');
         }

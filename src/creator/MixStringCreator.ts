@@ -1,7 +1,9 @@
 import StringCreator from "./StringCreator";
 export default abstract class MixStringCreator implements StringCreator {
+
     private firstCreator: StringCreator;
     private secondCreator: StringCreator;
+
     constructor({ firstCreator, secondCreator }: { firstCreator: StringCreator, secondCreator: StringCreator }) {
         this.firstCreator = firstCreator;
         this.secondCreator = secondCreator;
