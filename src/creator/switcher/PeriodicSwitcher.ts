@@ -1,4 +1,4 @@
-import StringCreator from "./StringCreator";
+import StringCreator from "../StringCreator";
 import MixStringCreator from "./MixStringCreator";
 
 export default class PeriodicSwitcher extends MixStringCreator {

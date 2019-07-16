@@ -1,6 +1,6 @@
 import assert from 'assert';
 
-import PeriodicSwitcher from "../../src/creator/PeriodicSwitcher";
+import PeriodicSwitcher from "../../src/creator/switcher/PeriodicSwitcher";
 
 import StringCreator from "../../src/creator/StringCreator";
 

@@ -1,4 +1,4 @@
-import StringCreator from "./StringCreator";
+import StringCreator from "../StringCreator";
 export default abstract class MixStringCreator implements StringCreator {
 
     private firstCreator: StringCreator;
