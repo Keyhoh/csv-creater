@@ -19,16 +19,19 @@ export default class PeriodicSwitcher extends MixStringCreator {
     }
 
     useFirst(): boolean {
+        this.count();
         return this.firstCounter > 0;
     }
 
     private count() {
-        if (this.firstCounter < this.firstPeriod) {
-            this.firstCounter++;
-            this.secondCounter = 0;
-        } else if (this.secondCounter < this.secondPeriod) {
-            this.secondCounter++;
-            this.firstCounter = 0;
+        if (this.firstCounter > 0) {
+            this.firstCounter--;
+        } else if (this.secondCounter > 0) {
+            this.secondCounter--;
+        }
+        if (this.firstCounter <= 0 && this.secondCounter <= 0) {
+            this.firstCounter = this.firstPeriod;
+            this.secondCounter = this.secondPeriod;
         }
     }
 }
