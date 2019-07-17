@@ -4,10 +4,9 @@ import MixStringCreator from "./MixStringCreator";
 export default class PeriodicSwitcher extends MixStringCreator {
 
     private readonly firstPeriod: number;
-    private readonly secondPeriod: number;
+    private readonly totalPeriod: number;
 
-    private firstCounter: number = 0;
-    private secondCounter: number = 0;
+    private counter: number = 0;
 
     constructor(
         { firstCreator, secondCreator }: { firstCreator: StringCreator, secondCreator: StringCreator },
@@ -15,23 +14,16 @@ export default class PeriodicSwitcher extends MixStringCreator {
     ) {
         super({ firstCreator, secondCreator });
         this.firstPeriod = firstPeriod;
-        this.secondPeriod = secondPeriod;
+        this.totalPeriod = firstPeriod + secondPeriod;
     }
 
     useFirst(): boolean {
         this.count();
-        return this.firstCounter > 0;
+        return this.counter <= this.firstPeriod;
     }
 
-    private count() {
-        if (this.firstCounter > 0) {
-            this.firstCounter--;
-        } else if (this.secondCounter > 0) {
-            this.secondCounter--;
-        }
-        if (this.firstCounter <= 0 && this.secondCounter <= 0) {
-            this.firstCounter = this.firstPeriod;
-            this.secondCounter = this.secondPeriod;
-        }
+    private count(): void {
+        if (this.counter >= this.totalPeriod) this.counter = 0;
+        this.counter++;
     }
 }
