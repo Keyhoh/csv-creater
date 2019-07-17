@@ -10,11 +10,11 @@ export default class PeriodicSwitcher extends MixStringCreator {
 
     constructor(
         { firstCreator, secondCreator }: { firstCreator: StringCreator, secondCreator: StringCreator },
-        { firstPeriod, secondPeriod }: { firstPeriod: number, secondPeriod: number },
+        { firstPeriod, totalPeriod: totalPeriod }: { firstPeriod: number, totalPeriod: number },
     ) {
         super({ firstCreator, secondCreator });
         this.firstPeriod = firstPeriod;
-        this.totalPeriod = firstPeriod + secondPeriod;
+        this.totalPeriod = totalPeriod;
     }
 
     useFirst(): boolean {

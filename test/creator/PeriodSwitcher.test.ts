@@ -21,7 +21,7 @@ describe('PeriodicSwitcher', () => {
     it("should return alternately", () => {
         const returnAlternately = new PeriodicSwitcher(
             { firstCreator, secondCreator },
-            { firstPeriod: 1, secondPeriod: 1 }
+            { firstPeriod: 1, totalPeriod: 2 }
         );
 
         for (let i = 0; i < 100; i++) {
@@ -33,7 +33,7 @@ describe('PeriodicSwitcher', () => {
     it("should return alternately every two times", () => {
         const returnAlternately = new PeriodicSwitcher(
             { firstCreator, secondCreator },
-            { firstPeriod: 2, secondPeriod: 2 }
+            { firstPeriod: 2, totalPeriod: 4 }
         );
 
         for (let i = 0; i < 100; i++) {
@@ -48,7 +48,7 @@ describe('PeriodicSwitcher', () => {
     it("should return alternately each period (1, 2)", () => {
         const returnAlternatelyEachPeriod = new PeriodicSwitcher(
             { firstCreator, secondCreator },
-            { firstPeriod: 1, secondPeriod: 2 }
+            { firstPeriod: 1, totalPeriod: 3 }
         );
         for (let i = 0; i < 100; i++) {
             assert.equal(returnAlternatelyEachPeriod.create(), 'first');
@@ -61,7 +61,7 @@ describe('PeriodicSwitcher', () => {
     it("should return alternately each period (5, 7)", () => {
         const returnAlternatelyEachPeriod = new PeriodicSwitcher(
             { firstCreator, secondCreator },
-            { firstPeriod: 2, secondPeriod: 1 }
+            { firstPeriod: 2, totalPeriod: 3 }
         );
         for (let i = 0; i < 100; i++) {
             assert.equal(returnAlternatelyEachPeriod.create(), 'first');
