@@ -1,8 +1,8 @@
 import assert from 'assert';
 
-import RandomSwitcher from "../../src/creator/switcher/RandomSwitcher";
+import RandomSwitcher from "../../../src/creator/switcher/RandomSwitcher";
 
-import StringCreator from "../../src/creator/StringCreator";
+import StringCreator from "../../../src/creator/StringCreator";
 
 class ConstantStringCreator implements StringCreator {
     private returnValue: string;

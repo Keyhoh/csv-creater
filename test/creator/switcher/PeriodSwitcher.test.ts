@@ -1,8 +1,8 @@
 import assert from 'assert';
 
-import PeriodicSwitcher from "../../src/creator/switcher/PeriodicSwitcher";
+import PeriodicSwitcher from "../../../src/creator/switcher/PeriodicSwitcher";
 
-import StringCreator from "../../src/creator/StringCreator";
+import StringCreator from "../../../src/creator/StringCreator";
 
 class ConstantStringCreator implements StringCreator {
     private returnValue: string;
