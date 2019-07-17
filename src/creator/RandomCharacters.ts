@@ -4,7 +4,7 @@ export default class RandomCharacters extends RandomStringCreator {
 
     private readonly length: number;
 
-    constructor({ length }: { length: number }, random: () => number) {
+    constructor({ length }: { length: number }, random: () => number = Math.random) {
         super(random);
         this.length = length;
     }
@@ -13,7 +13,7 @@ export default class RandomCharacters extends RandomStringCreator {
         if (this.length < 0) {
             return null;
         } else {
-            return [...Array(this.length)].map(_ => (this.random() * 36 | 0).toString(36)).join('');
+            return [...new Array(this.length).fill('')].map(_ => (this.random() * 36 | 0).toString(36)).join('');
         }
     }
 }

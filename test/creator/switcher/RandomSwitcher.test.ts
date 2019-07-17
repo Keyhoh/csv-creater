@@ -30,5 +30,5 @@ describe('RandomSwitcher', () => {
         for (let i = 0; i < 100; i++) {
             assert.equal(returnSecond.create(), 'second');
         }
-    })
+    });
 });
