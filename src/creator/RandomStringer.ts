@@ -1,6 +1,6 @@
 import RandomStringCreator from "./RandomStringCreator";
 
-export default class RandomCharacters extends RandomStringCreator {
+export default class RandomStringer extends RandomStringCreator {
 
     private readonly length: number;
 
