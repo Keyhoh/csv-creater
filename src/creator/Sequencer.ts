@@ -12,7 +12,7 @@ export default class Sequencer implements StringCreator {
         this.step = isNaN(step) ? 1 : step;
     }
 
-    create(): string | null {
+    create(): string {
         return String(this.from + this.step * this.counter++);
     }
 }

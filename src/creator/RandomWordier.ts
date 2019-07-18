@@ -8,7 +8,7 @@ export default class RandomWordier extends RandomStringCreator {
         super(random);
         this.words = words;
     }
-    create(): string | null {
+    create(): string {
         return this.words[Math.floor(this.random() * this.words.length)];
     }
 }

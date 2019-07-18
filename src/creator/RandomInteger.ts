@@ -16,7 +16,7 @@ export default class RandomInteger extends RandomStringCreator {
     this.fix = len >= 0 ? Math.floor : Math.ceil;
   }
 
-  create(): string | null {
+  create(): string {
     return String(this.fix(this.random() * this.len) + this.from);
   }
 }
