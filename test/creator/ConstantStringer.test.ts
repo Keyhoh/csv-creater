@@ -1,4 +1,4 @@
-import ConstantStringer from "../../src/creator/ConstantStringer";
+import { ConstantStringer } from "../../src/index";
 import assert = require("assert");
 
 describe('ConstantStringer', () => {

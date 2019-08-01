@@ -1,6 +1,6 @@
 import assert from 'assert';
 
-import RandomSwitcher from "../../../src/creator/switcher/RandomSwitcher";
+import { RandomSwitcher } from "../../../src/index";
 
 import StringCreator from "../../../src/creator/StringCreator";
 

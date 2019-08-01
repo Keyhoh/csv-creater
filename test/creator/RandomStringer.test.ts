@@ -1,4 +1,4 @@
-import RandomStringer from "../../src/creator/RandomStringer";
+import { RandomStringer } from "../../src/index";
 import assert = require("assert");
 
 describe('RandomStringer', () => {

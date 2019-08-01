@@ -1,4 +1,4 @@
-import RandomWordier from "../../src/creator/RandomWordier";
+import { RandomWordier } from "../../src/index";
 import assert = require("assert");
 
 describe('RandomWordier', () => {

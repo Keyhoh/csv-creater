@@ -1,7 +1,7 @@
-import StringProcessor from "../../../src/creator/processor/StringProcessor";
-import Sequencer from "../../../src/creator/Sequencer";
+import { StringProcessor } from "../../../src/index";
+import { Sequencer } from "../../../src/index";
 import assert = require("assert");
-import ConstantStringer from "../../../src/creator/ConstantStringer";
+import { ConstantStringer } from "../../../src/index";
 
 describe('StringProcessor', () => {
     it("should return processed string", () => {

@@ -1,6 +1,6 @@
 import assert from "assert";
 
-import Sequencer from "../../src/creator/Sequencer";
+import { Sequencer } from "../../src/index";
 
 describe('sequencer', () => {
     const MAX = 10000;

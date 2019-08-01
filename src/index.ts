@@ -1,13 +1,21 @@
-import StringCreator from "./creator/StringCreator";
-const createLineFromStringCreator = (stringCreators: Array<StringCreator>, separator = ',') => {
-    return stringCreators.map(executable => executable.create()).join(separator);
-}
+import ConstantStringer from "./creator/ConstantStringer";
+import Sequencer from "./creator/Sequencer";
+import RandomInteger from "./creator/RandomInteger";
+import RandomStringer from "./creator/RandomStringer";
+import RandomWordier from "./creator/RandomWordier";
 
-import Sequencer from "./creator/sequencer";
+import PeriodicSwitcher from "./creator/switcher/PeriodicSwitcher";
+import RandomSwitcher from "./creator/switcher/RandomSwitcher";
 
-const defaultSeq = new Sequencer({ from: 1, step: 1 });
-const reverseSeq = new Sequencer({ from: -1, step: -1 });
+import StringProcessor from "./creator/processor/StringProcessor";
 
-for (let i = 0; i < 10; i++) {
-    console.log(createLineFromStringCreator([defaultSeq, reverseSeq]));
-}
+export {
+    ConstantStringer,
+    Sequencer,
+    RandomInteger,
+    RandomStringer,
+    RandomWordier,
+    PeriodicSwitcher,
+    RandomSwitcher,
+    StringProcessor
+};
