@@ -15,10 +15,10 @@
     "@types/assert": "^1.4.2",
     "@types/mocha": "^5.2.7",
     "mocha": "^6.1.4",
-    "ts-loader": "^6.0.4",
+    "ts-loader": "^9.4.2",
     "ts-node": "^8.3.0",
-    "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   },
   "dependencies": {
     "app-root-path": "^2.2.1"
